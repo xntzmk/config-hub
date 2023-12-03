@@ -1,0 +1,153 @@
+{
+  "main": {
+    "id": "48eab500000f488d",
+    "type": "split",
+    "children": [
+      {
+        "id": "547c88ae1e28e6dd",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Pasted image 20220715115420.png.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bc335a2ba8dd3675",
+    "type": "split",
+    "children": [
+      {
+        "id": "92b515006292439f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cd0e650e9bc8d6b2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "c4d1f1032e093dbe",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#进入文本框选择模",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d6a68d066495d1c2",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 167.5
+  },
+  "right": {
+    "id": "ba38a0db5543eca0",
+    "type": "split",
+    "children": [
+      {
+        "id": "0968af10281473f0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "46ffba6a5faf2e83",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Pasted image 20220715115420.png.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c543d6b9f3fd866f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "b58730e417fee854",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Pasted image 20220715115420.png.md"
+              }
+            }
+          },
+          {
+            "id": "b51a2c8c9ea782df",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Pasted image 20220715115420.png.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "1eeda19ea4b88347",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 246.83334350585938,
+    "collapsed": true
+  },
+  "active": "547c88ae1e28e6dd",
+  "lastOpenFiles": [
+    "UI库的使用.md",
+    "Vimium C 映射.md",
+    "面试.md",
+    "一些问题.md",
+    "购买.md",
+    "磁力.md",
+    "Pasted image 20220715115420.png.md",
+    "_diary/2022-04-15.md",
+    "_diary/2022-04-11.md",
+    "CSS技巧.md"
+  ]
+}

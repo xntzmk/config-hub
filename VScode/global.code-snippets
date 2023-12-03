@@ -1,0 +1,160 @@
+{
+  // Place your 全局 snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+
+
+  /** Base */
+  "simple console.log": {
+    "prefix": "l",
+    "body": ["console.log($1)"],
+  },
+
+  "console.log": {
+    "prefix": "clg",
+    "body": ["console.log($1)"],
+  },
+
+  "const": {
+    "prefix": "cn",
+    "body": ["const ${1:a} = $2"],
+  },
+
+  "default":{
+    "prefix": "dft",
+    "body": ["default"],
+  },
+
+  "for loop": {
+    "prefix": "for",
+    "body": [
+      "for (let ${1:i} = 0; ${1:i} < ${2:arr}.length; ${1:i}++) {",
+      "\tconst ${3:c} = ${2:arr}[${1:i}];",
+      "\t$0",
+      "}"
+    ]
+  },
+
+  "deconstruct object": {
+    "prefix": "do",
+    "body": ["const {${2:key}} = ${1:obj}"],
+  },
+
+  "deconstruct array": {
+    "prefix": "da",
+    "body": ["const {${2:first}} = ${1:arr}"],
+  },
+
+  "return new Promise": {
+    "prefix": "np",
+    "body": ["return new Promise((resolve, reject) => {", "$1", "})"],
+  },
+  "then & catch & finally": {
+    "prefix": "tc",
+    "body": [".then((res) => {", "  $1", "}).catch((err) => {", "  $2", "}).finally(() => {", "  $3", "})"],
+  },
+
+  /** Func, Export */
+  "function declaration": {
+    "prefix": "fn",
+    "body": ["function ${1:f}($2) {", "$3", "}"],
+  },
+  "async function declaration": {
+    "prefix": "afn",
+    "body": ["async function ${1:f}($2) {", "$3", "}"],
+  },
+
+  "arrow function": {
+    "prefix": "cfn",
+    "body": ["const ${1:f} = ($2) => {", "$3", "}"],
+  },
+  "async arrow function": {
+    "prefix": "cafn",
+    "body": ["const ${1:f} = async ($2) => {", "$3", "}"],
+  },
+
+  "anonymous function": {
+    "prefix": "f",
+    "body": ["($1) => {$2}"],
+  },
+
+  "export function declaration": {
+    "prefix": "efn",
+    "body": ["export function ${1:f} () {", "$2", "}"],
+  },
+  "export async function declaration": {
+    "prefix": "eafn",
+    "body": ["export async function ${1:f} () {", "$2", "}"],
+  },
+
+  "export arrow function": {
+    "prefix": "ecfn",
+    "body": ["export const ${1:bar} = $2"],
+  },
+  "export async arrow function": {
+    "prefix": "ecafn",
+    "body": ["export async const ${1:bar} = $2"],
+  },
+
+  "export from": {
+    "prefix": "ex",
+    "body": [
+      "export {$2} from '$1'"
+    ],
+  },
+
+  /** Hooks */
+  "use hooks": {
+    "prefix": "use",
+    "body": ["export function ${1:$TM_FILENAME_BASE} () {", "$2", "}"],
+  },
+
+  /** Vue */
+  "vue-script-setup": {
+    "scope": "vue",
+    "prefix": "<sc",
+    "body": [
+      "<script setup lang=\"ts\">",
+      "$1",
+      "</script>",
+      "",
+      "<template>",
+      "  <div>",
+      "    ${2:$TM_FILENAME_BASE}",
+      "  </div>",
+      "</template>",
+    ]
+  },
+
+  "vue-template": {
+    "scope": "vue",
+    "prefix": "vue",
+    "body": [
+      "<template>",
+      "  <div>",
+      "    ${2:$TM_FILENAME_BASE}",
+      "  </div>",
+      "</template>",
+      "",
+      "<script setup lang=\"ts\">",
+      "$1",
+      "</script>",
+      "",
+      "<style lang=\"scss\" scoped>",
+      "",
+      "</style>",
+      ""
+    ],
+  },
+
+  "vue-computed": {
+    "scope": "javascript,typescript,vue",
+    "prefix": "com",
+    "body": [
+      "computed(() => { $1 })"
+    ]
+  },
+}

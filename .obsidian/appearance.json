@@ -1,0 +1,11 @@
+{
+  "baseFontSize": 17,
+  "theme": "moonstone",
+  "translucency": false,
+  "cssTheme": "Blue Topaz",
+  "textFontFamily": "MonoLisa,Maple Hand",
+  "interfaceFontFamily": "Maple Hand",
+  "monospaceFontFamily": "MonoLisa",
+  "accentColor": "",
+  "nativeMenus": false
+}

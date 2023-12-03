@@ -1,0 +1,209 @@
+[
+  /** -------- Common -------- */
+
+  // 拆分
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.splitEditor"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+  },
+
+  // 面板切换
+  { "key": "alt+h", "command": "workbench.action.navigateLeft" },
+  { "key": "alt+l", "command": "workbench.action.navigateRight" },
+  // { "key": "alt+j", "command": "workbench.action.navigateDown" }, 
+  // { "key": "alt+k", "command": "workbench.action.navigateUp" },
+
+  // 移动行
+  {
+    "key": "alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // 聚焦侧边栏
+  {
+    "key": "ctrl+e",
+    "command": "workbench.files.action.focusFilesExplorer",
+  },
+
+  // 聚焦编辑器组
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "filesExplorerFocus"
+  },
+
+  // 快速修复
+  {
+    "key": "ctrl+u",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+  },
+
+  // 查找当前文件问题
+  {
+    "key": "ctrl+8",
+    "command": "editor.action.marker.next",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+9",
+    "command": "editor.action.marker.prev",
+    "when": "editorFocus"
+  },
+
+  /** -------- 文件树 -------- */
+
+  // 新建文件
+  {
+    "command": "explorer.newFile",
+    "key": "a",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+
+  // 新建文件夹
+  {
+    "command": "explorer.newFolder",
+    "key": "shift+a",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+
+  // 删除文件
+  {
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+
+  // 重命名
+  {
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+
+  // 剪切
+  {
+    "command": "filesExplorer.cut",
+    "key": "x",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+
+  // 复制
+  {
+    "command": "filesExplorer.copy",
+    "key": "y",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+
+  // 粘贴
+  {
+    "command": "filesExplorer.paste",
+    "key": "p",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+
+  // 搜索
+  {
+    "key": "/",
+    "command": "list.find",
+    "when": "listFocus && listSupportsFind && !inputFocus"
+  },
+
+  // 折叠所有面板
+  {
+    "key": "shift+c",
+    "command": "workbench.files.action.collapseExplorerFolders",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+
+  /** -------- Workbench -------- */
+
+  // tab 切换
+  { "key": "ctrl+,", "command": "workbench.action.previousEditor" },
+  { "key": "ctrl+.", "command": "workbench.action.nextEditor" },
+
+  /** -------- Terminal -------- */
+
+  // tab 切换
+  {
+    "key": "ctrl+,",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+.",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+
+  // 关闭终端
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+
+  // 最大化终端
+  {
+    "key": "ctrl+enter",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
+  },
+
+  // 聚焦终端
+  {
+    "key": "ctrl+;",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+
+  /** -------- Extensions -------- */
+
+  // 增量范围选中扩大、缩小
+  {
+    "key": "enter",
+    "command": "expand_region",
+    "when": "editorTextFocus && (vim.mode == 'Normal' || vim.mode == 'Visual') && !suggestWidgetVisible"
+  },
+  {
+    "key": "backspace",
+    "command": "undo_expand_region",
+    "when": "editorTextFocus && editorHasSelection && vim.mode == 'Visual'"
+  },
+
+  /** -------- 禁用设置 -------- */
+  {
+    "key": "ctrl+j",
+    "command": "-workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "-workbench.action.openSettings"
+  },
+  {
+    "key": "alt+l alt+o",
+    "command": "-extension.liveServer.goOnline",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+u",
+    "command": "-workbench.action.output.toggleOutput",
+    "when": "workbench.panel.output.active"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-expand_region",
+    "when": "editorTextFocus"
+  },
+]

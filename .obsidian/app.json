@@ -1,0 +1,17 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "vimMode": true,
+  "trashOption": "system",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "_temp",
+  "attachmentFolderPath": "_src",
+  "promptDelete": false,
+  "tabSize": 2,
+  "autoPairMarkdown": false,
+  "alwaysUpdateLinks": true,
+  "readableLineLength": false,
+  "showLineNumber": true,
+  "rightToLeft": false,
+  "spellcheck": true
+}
