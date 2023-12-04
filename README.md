@@ -4,10 +4,9 @@
 
 <samp><b>Xntzmk's VS Code Settings</b></samp>
 
-[`.vscode/settings.json`](./VScode/settings.json)<br>
-[`.vscode/extensions.json`](./VScode/extensions.json)<br>
+[`.vscode/settings.json`](./VScode/settings.jsonc)<br>
+[`.vscode/keybindings.json`](./VScode/keybindings.jsonc)<br>
 [`.vscode/global.code-snippets`](./VScode/global.code-snippets)
-
 
 ## LICENSE
 
