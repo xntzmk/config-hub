@@ -1,3 +1,0 @@
-patch:
-  # 输入时显示双拼编码
-  translator/preedit_format: []
