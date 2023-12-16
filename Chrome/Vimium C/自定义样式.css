@@ -34,8 +34,7 @@ https://github.com/dermoumi/vimium-snow
   position: absolute;
   background: rgba(255, 247, 121, 0.95);
   top: 0;
-  left: 0;
-  right: 0;
+  left: 0; right: 0;
   bottom: 0;
   content: "";
   z-index: -1;
