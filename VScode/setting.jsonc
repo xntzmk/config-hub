@@ -4,22 +4,25 @@
 
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+
   "window.zoomLevel": 1,
   "window.menuBarVisibility": "compact",
 
-  /** Workbench */
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "GitHub Plus",
-  // "workbench.colorTheme": "Vitesse Dark",
-  "workbench.productIconTheme": "icons-carbon",
+  /** -------- Workbench -------- */
   "workbench.tree.indent": 15,
   "workbench.list.smoothScrolling": true,
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.editor.tabActionCloseVisibility": false,
-  "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.perEditorGroup": true,
   "workbench.editor.limit.value": 10,
+  "workbench.editor.limit.perEditorGroup": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.tabActionCloseVisibility": false,
+
+  // theme setup
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Fleet Dark",
+  // "workbench.colorTheme": "GitHub Plus",
+  "workbench.productIconTheme": "icons-carbon",
   "workbench.colorCustomizations": {
     // "tree.inactiveIndentGuidesStroke": "#6e719b",
     "[GitHub Plus]": {
@@ -39,38 +42,42 @@
   "editor.fontFamily": "MonoLisa, Maple Hand, LXGW WenKai Mono",
   "editor.fontLigatures": true,
   "editor.linkedEditing": true,
-  "editor.formatOnSave": false,
-  "editor.smoothScrolling": true,
   "editor.minimap.enabled": false,
   "editor.detectIndentation": false,
-  "editor.snippetSuggestions": "top",
-  "editor.suggest.insertMode": "replace",
-  "editor.codeActionWidget.includeNearbyQuickFixes": true, // 行内快捷修复
+  "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never", // 防止import的分号冲突
   },
-  "editor.suggestSelection": "recentlyUsed",
-  "editor.acceptSuggestionOnCommitCharacter": false, // 左括号、分号不键入自动补全
   "editor.occurrencesHighlight": "multiFile",
-  "editor.accessibilitySupport": "off",
   "editor.find.addExtraSpaceOnTop": false,
-  "editor.hover.sticky": true,
   "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionWidget.includeNearbyQuickFixes": true, // 行内快捷修复
   "editor.guides.bracketPairs": "active", // 括号连线 
-  "editor.cursorBlinking": "smooth",
-  // "editor.renderWhitespace": "boundary", // 配合 indent-rainbow 插件使用
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.suggest.preview": true,
+  "editor.hover.sticky": true,
   "editor.stickyScroll.enabled": true,
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+
+  // suggest
+  "editor.suggest.preview": true,
+  "editor.suggestSelection": "recentlyUsed",
+  "editor.suggest.insertMode": "replace",
+  "editor.snippetSuggestions": "top",
+  "editor.acceptSuggestionOnCommitCharacter": false, // 左括号、分号不键入自动补全
   "editor.suggest.snippetsPreventQuickSuggestions": false, // 可以在使用代码片段后启用快速建议
-  "editor.semanticTokenColorCustomizations": {
-    "[GitHub Plus]": { "enabled": true },
-  },
+
+  // theme setup
+  "editor.semanticTokenColorCustomizations": { },
   "editor.tokenColorCustomizations": {
     "[GitHub Plus]": {
       "textMateRules": [
+        {
+          "scope": [ "comment.line.double-slash" ],
+          "settings": { "fontStyle": "italic" }
+        },
         {
           "scope": [ "constant", "variable.other.constant" ],
           "settings": {
@@ -82,23 +89,24 @@
           "scope": [ "storage.type.function" ],
           "settings": { "foreground": "#ff808b", "fontStyle": "italic" }
         },
-        {
-          "name": "object property",
-          "scope": [ "meta.object-literal.key", "variable.other.property" ],
-          "settings": { /* "foreground": "#bf9eee" */ }
-        },
+        // {
+        //   "name": "object property",
+        //   "scope": [ "variable.other.property" ],
+        //   "settings": {  "foreground": "#bf9eee"  }
+        // },
         {
           "scope": [
             "keyword.control.export",
             "keyword.control.import",
             "keyword.control.from",
+            "keyword.control.default",
             "storage.modifier", // static keyword
             "storage.type.class", // class keyword
           ],
           "settings": { "fontStyle": "italic" }
         },
         {
-          "name": "Function parameters",
+          "name": "function parameter",
           "scope": [
             "entity.name.variable.parameter",
             "meta.at-rule.function variable",
@@ -110,10 +118,8 @@
           "settings": { "fontStyle": "italic", "foreground": "#3a99aa" }
         },
         {
-          "name": "JSDoc-style comment parameters",
-          "scope": [
-            "comment.block.documentation variable"
-          ],
+          "name": "JSDoc-Style comment parameters",
+          "scope": [ "comment.block.documentation variable" ],
           "settings": { "fontStyle": "italic", "foreground": "#3a99aa" }
         },
         {
@@ -132,7 +138,11 @@
             "variable.parameter.function.language.special"
           ],
           "settings": { "foreground": "#f36974" }
-        }
+        },
+        // {
+        //   "name": "try catch",
+        //   "settings": { "foreground": "#83D6C5", }
+        // }
       ]
     }
   },
@@ -155,7 +165,7 @@
     "**/yarn.lock": true
   },
 
-  /** -------- Terminal --------*/
+  /** -------- Terminal -------- */
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.fontWeight": "400",
@@ -170,9 +180,8 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
-  "diffEditor.ignoreTrimWhitespace": false,
 
-  /** -------- Vim  --------*/
+  /** -------- Vim -------- */
   "vim.foldfix": true,
   "vim.hlsearch": true,
   "vim.leader": "<Space>",
@@ -192,9 +201,6 @@
     { "before": [ "L" ], "after": [ "g", "_" ] },
     { "before": [ "J" ], "after": [ "5", "g", "j" ] },
     { "before": [ "K" ], "after": [ "5", "g", "k" ] },
-
-    { "before": [ "s" ], "after": [ "f" ] }, // 将 flash.vim 查找键设置为 s
-    { "before": [ "f" ], "after": [ "\\" ] }, // 还原 f 的原生命令
 
     { "before": [ "n" ], "after": [ "n", "z", "z" ] },
     { "before": [ "N" ], "after": [ "N", "z", "z" ] },
@@ -227,7 +233,8 @@
 
     // 单词添加引号 
     { "before": [ "'", "'" ], "after": [ "v", "i", "w", "S", "'", "e", "l" ] },
-    { "before": [ "\"", "\"" ], "after": [ "v", "i", "w", "S", "\"", "e", "l" ] },
+    { "before": [ "'", "\"" ], "after": [ "v", "i", "w", "S", "\"", "e", "l" ] },
+    { "before": [ "'", "c" ], "after": [ "v", "i", "w", "S", "`" ] },
 
     // 大小写
     { "before": [ "g", "u" ], "after": [ "v", "i", "w", "g", "u" ] },
@@ -248,7 +255,7 @@
     { "before": [ "<leader>", "l" ], "commands": [ "turboConsoleLog.displayLogMessage" ] },
 
     // 快速删除函数
-    { "before": [ "<leader>", "d", "f" ], "commands": [ "delete-function.deleteFunction" ] }
+    { "before": [ "<leader>", "d", "f" ], "commands": [ "delete-function.deleteFunction" ] },
   ],
 
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -259,9 +266,6 @@
     { "before": [ "y" ], "after": [ "y", "g", "v", "<esc>" ] }, // 在可视化模式下 y 之后光标停到当前的位置
     { "before": [ "p" ], "after": [ "p", "g", "v", "y" ] }, // 防止 p 之后寄存器被覆盖
 
-    { "before": [ "s" ], "after": [ "f" ] },
-    { "before": [ "f" ], "after": [ "\\" ] },
-
     // 缩进
     { "before": [ "tab" ], "commands": [ "editor.action.indentLines" ] },
     { "before": [ "shift+tab" ], "commands": [ "editor.action.outdentLines" ] },
@@ -269,7 +273,7 @@
 
   /** -------- Eslint https://github.com/antfu/eslint-config -------- */
   "eslint.quiet": true,
-  "eslint.experimental.useFlatConfig": true,
+  "eslint.experimental.useFlatConfig": false,
   "eslint.codeAction.showDocumentation": { "enable": true },
   "eslint.validate": [
     "javascript",
@@ -281,12 +285,23 @@
     "markdown",
     "json",
     "jsonc",
-    "json5"
+    "json5",
   ],
 
-  /** -------- Extensions -------- */
-  "emmet.showSuggestionsAsSnippets": true,
+  /** -------- Markdown -------- */
+  "[markdown]": {
+    "editor.wordWrap": "off",
+    "editor.formatOnSave": true,
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+  },
+  "markdown-preview-enhanced.codeBlockTheme": "vue.css",
 
+  /** -------- Extensions -------- */
   "errorLens.enabledDiagnosticLevels": [ "warning", "error", ],
   "errorLens.excludeBySource": [ "cSpell", "Grammarly", "eslint", ],
 
@@ -310,9 +325,9 @@
   "cSpell.spellCheckOnlyWorkspaceFiles": true,
   "cSpell.userWords": [ "Grammarly", "xntzmk" ],
 
-  "vue.autoInsert.dotValue": true,
-
   "turboConsoleLog.quote": "'",
+
+  "vue.autoInsert.dotValue": true,
 
   "better-comments.tags": [
     { "tag": "*", "color": "#98C379", },
