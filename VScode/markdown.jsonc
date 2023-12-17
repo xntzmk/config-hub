@@ -1,0 +1,65 @@
+{
+  // title
+	"h1": { "prefix": "h1", "body": [ "# ${1:h1}" ] },
+	"h2": { "prefix": "h2", "body": [ "## ${1:h2}" ] },
+	"h3": { "prefix": "h3", "body": [ "### ${1:h3}" ] },
+	"h4": { "prefix": "h4", "body": [ "#### ${1:h4}" ] },
+	"h5": { "prefix": "h5", "body": [ "##### ${1:h5}" ] },
+	"h6": { "prefix": "h6", "body": [ "###### ${1:h6}" ] },
+
+  // link
+	"anchor": {
+		"prefix": "a",
+		"body": ["[${2:点此查看}](${1:link})"],
+	},
+	"image": {
+		"prefix": "img",
+		"body": ["![](${1:link})"],
+	},
+	"center image": {
+		"prefix": "cimg",
+		"body": ["<div align=center><img src=\"${1:link}\"></div>"],
+	},
+
+  // style
+	"bold style": {
+		"prefix": "b",
+		"body": ["**${1:content}**"],
+	},
+	"italic style": {
+		"prefix": "i",
+		"body": ["*${1:content}*"],
+	},
+	"bold italic style": {
+		"prefix": "bi",
+		"body": ["***${1:content}***"],
+	},
+	"highlight style": {
+		"prefix": "hl",
+		"body": ["==${1:content}=="],
+	},
+
+  // task
+	"task item": {
+		"prefix": "t",
+		"body": ["- [ ] ${1:task}"],
+	},
+	"complete task item": {
+		"prefix": "ct",
+		"body": ["- [x] ${1:task}"],
+	},
+
+  // block
+	"code block": {
+		"prefix": "code",
+		"body": ["```$1","$2","```"],
+	},
+	"simple table": {
+		"prefix": "table",
+		"body": [
+			"|${1:title1} | ${2:title2} |",
+			"| - | - |",
+			"|   |   |"
+		],
+	},
+}
