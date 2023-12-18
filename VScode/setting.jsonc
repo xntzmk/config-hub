@@ -20,9 +20,9 @@
 
   // theme setup
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Fleet Dark",
-  // "workbench.colorTheme": "GitHub Plus",
   "workbench.productIconTheme": "icons-carbon",
+  "workbench.preferredLightColorTheme": "GitHub Plus",
+  "workbench.preferredDarkColorTheme": "Fleet Dark",
   "workbench.colorCustomizations": {
     // "tree.inactiveIndentGuidesStroke": "#6e719b",
     "[GitHub Plus]": {
