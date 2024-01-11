@@ -20,9 +20,10 @@
 
   // theme setup
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Fleet Dark",
-  // "workbench.colorTheme": "GitHub Plus",
   "workbench.productIconTheme": "icons-carbon",
+  "workbench.colorTheme": "GitHub Plus",
+  "workbench.preferredLightColorTheme": "GitHub Plus",
+  "workbench.preferredDarkColorTheme": "Fleet Dark",
   "workbench.colorCustomizations": {
     // "tree.inactiveIndentGuidesStroke": "#6e719b",
     "[GitHub Plus]": {
@@ -89,6 +90,10 @@
           "scope": [ "storage.type.function" ],
           "settings": { "foreground": "#ff808b", "fontStyle": "italic" }
         },
+        {
+          "scope": [ "keyword.control.trycatch", "variable.language.this" ],
+          "settings": { "foreground": "#42a5f5" }
+        },
         // {
         //   "name": "object property",
         //   "scope": [ "variable.other.property" ],
@@ -98,10 +103,11 @@
           "scope": [
             "keyword.control.export",
             "keyword.control.import",
-            "keyword.control.from",
             "keyword.control.default",
-            "storage.modifier", // static keyword
-            "storage.type.class", // class keyword
+            "keyword.control.from",
+            "keyword.control.flow",
+            "storage.modifier",
+            "storage.type.class",
           ],
           "settings": { "fontStyle": "italic" }
         },
@@ -113,7 +119,8 @@
             "meta.at-rule.mixin variable",
             "meta.function.arguments variable.other.php",
             "meta.selectionset.graphql meta.arguments.graphql variable.arguments.graphql",
-            "variable.parameter"
+            "variable.parameter",
+            "variable.other.readwrite",
           ],
           "settings": { "fontStyle": "italic", "foreground": "#3a99aa" }
         },
@@ -125,24 +132,11 @@
         {
           "name": "Destructuring / aliasing reference name (LHS)",
           "scope": [
-            "meta.import variable.other.readwrite", // import
+            "meta.import",
             "meta.variable.assignment.destructured.object.coffee variable"
           ],
           "settings": { "foreground": "#3a99aa" }
         },
-        {
-          "name": "this, super, self, etc.",
-          "scope": [
-            "variable.language.this",
-            "variable.language.super",
-            "variable.parameter.function.language.special"
-          ],
-          "settings": { "foreground": "#f36974" }
-        },
-        // {
-        //   "name": "try catch",
-        //   "settings": { "foreground": "#83D6C5", }
-        // }
       ]
     }
   },
@@ -186,6 +180,7 @@
   "vim.hlsearch": true,
   "vim.leader": "<Space>",
   "vim.useCtrlKeys": false,
+  "vim.useSystemClipboard": true,
 
   // flash.vim
   "vim.flash.enable": true,
@@ -253,9 +248,6 @@
 
     // 快速打印
     { "before": [ "<leader>", "l" ], "commands": [ "turboConsoleLog.displayLogMessage" ] },
-
-    // 快速删除函数
-    { "before": [ "<leader>", "d", "f" ], "commands": [ "delete-function.deleteFunction" ] },
   ],
 
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -292,18 +284,14 @@
   "[markdown]": {
     "editor.wordWrap": "off",
     "editor.formatOnSave": true,
-    "editor.quickSuggestions": {
-      "comments": "on",
-      "strings": "on",
-      "other": "on"
-    },
+    "editor.quickSuggestions": { "comments": "on", "strings": "on", "other": "on" },
     "diffEditor.ignoreTrimWhitespace": false,
   },
   "markdown-preview-enhanced.codeBlockTheme": "vue.css",
 
   /** -------- Extensions -------- */
-  "errorLens.enabledDiagnosticLevels": [ "warning", "error", ],
-  "errorLens.excludeBySource": [ "cSpell", "Grammarly", "eslint", ],
+  "errorLens.enabledDiagnosticLevels": [ "warning", "error" ],
+  "errorLens.excludeBySource": [ "cSpell", "Grammarly", "eslint" ],
 
   // animations, custom_css
   "animations.Scrolling": "Fade",
@@ -330,15 +318,15 @@
   "vue.autoInsert.dotValue": true,
 
   "better-comments.tags": [
-    { "tag": "*", "color": "#98C379", },
-    { "tag": "?", "color": "#3498DB", },
-    { "tag": "#", "color": "#FF8C00", },
-    { "tag": "!", "color": "#FF2D00", },
-    { "tag": "-", "color": "#474747", "strikethrough": true, },
+    { "tag": "*", "color": "#98C379" },
+    { "tag": "?", "color": "#3498DB" },
+    { "tag": "#", "color": "#FF8C00" },
+    { "tag": "!", "color": "#FF2D00" },
+    { "tag": "-", "color": "#474747", "strikethrough": true },
   ],
 
   // File Nesting
-  "explorer.fileNesting.expand": false,
   "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.patterns": { },
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": { }
 }
