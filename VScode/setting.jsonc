@@ -6,7 +6,7 @@
   "explorer.confirmDragAndDrop": false,
 
   "window.zoomLevel": 1,
-  "window.menuBarVisibility": "compact",
+  "window.menuBarVisibility": "hidden",
 
   /** -------- Workbench -------- */
   "workbench.tree.indent": 15,
@@ -120,7 +120,6 @@
             "meta.function.arguments variable.other.php",
             "meta.selectionset.graphql meta.arguments.graphql variable.arguments.graphql",
             "variable.parameter",
-            "variable.other.readwrite",
           ],
           "settings": { "fontStyle": "italic", "foreground": "#3a99aa" }
         },
@@ -132,7 +131,7 @@
         {
           "name": "Destructuring / aliasing reference name (LHS)",
           "scope": [
-            "meta.import",
+            "meta.import variable.other.readwrite",
             "meta.variable.assignment.destructured.object.coffee variable"
           ],
           "settings": { "foreground": "#3a99aa" }
@@ -174,6 +173,7 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "always",
 
   /** -------- Vim -------- */
   "vim.foldfix": true,
@@ -245,9 +245,6 @@
 
     // 切换布尔值
     { "before": [ "<leader>", "i" ], "commands": [ "extension.toggleBool" ] },
-
-    // 快速打印
-    { "before": [ "<leader>", "l" ], "commands": [ "turboConsoleLog.displayLogMessage" ] },
   ],
 
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -313,8 +310,6 @@
   "cSpell.spellCheckOnlyWorkspaceFiles": true,
   "cSpell.userWords": [ "Grammarly", "xntzmk" ],
 
-  "turboConsoleLog.quote": "'",
-
   "vue.autoInsert.dotValue": true,
 
   "better-comments.tags": [
@@ -322,7 +317,7 @@
     { "tag": "?", "color": "#3498DB" },
     { "tag": "#", "color": "#FF8C00" },
     { "tag": "!", "color": "#FF2D00" },
-    { "tag": "-", "color": "#474747", "strikethrough": true },
+    { "tag": "-", "color": "#474747", "strikethrough": true, },
   ],
 
   // File Nesting

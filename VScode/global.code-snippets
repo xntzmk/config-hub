@@ -1,10 +1,5 @@
 {
   /** Base */
-  "simple console.log": {
-    "prefix": "l",
-    "body": ["console.log($1)"],
-  },
-
   "console.log": {
     "prefix": "clg",
     "body": ["console.log($1)"],

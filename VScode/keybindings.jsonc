@@ -12,13 +12,11 @@
     "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
   },
 
-  // 面板切换
+  // 左右面板切换
   { "key": "alt+h", "command": "workbench.action.navigateLeft" },
   { "key": "alt+l", "command": "workbench.action.navigateRight" },
-  // { "key": "alt+j", "command": "workbench.action.navigateDown" }, 
-  // { "key": "alt+k", "command": "workbench.action.navigateUp" },
 
-  // 移动行
+  // 上下移动行
   {
     "key": "alt+k",
     "command": "editor.action.moveLinesUpAction",
@@ -59,6 +57,13 @@
   {
     "key": "ctrl+9",
     "command": "editor.action.marker.prev",
+    "when": "editorFocus"
+  },
+
+  // 查找匹配项
+  {
+    "key": "ctrl+n",
+    "command": "editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
   },
 
@@ -130,8 +135,14 @@
   /** -------- Workbench -------- */
 
   // tab 切换
-  { "key": "ctrl+,", "command": "workbench.action.previousEditor" },
-  { "key": "ctrl+.", "command": "workbench.action.nextEditor" },
+  { "key": "ctrl+,",
+    "command": "runCommands",
+    "args": { "commands": [ "workbench.action.previousEditor", "extension.vim_escape" ] }
+  },
+  { "key": "ctrl+.",
+    "command": "runCommands",
+    "args": { "commands": [ "workbench.action.nextEditor", "extension.vim_escape" ] }
+  },
 
   /** -------- Terminal -------- */
 
@@ -170,6 +181,13 @@
 
   /** -------- Extensions -------- */
 
+  // markdown 打开侧边预览
+  {
+    "key": "ctrl+\\",
+    "command": "markdown-preview-enhanced.openPreviewToTheSide",
+    "when": "editorFocus && editorLangId == 'markdown'"
+  },
+
   // 增量范围选中扩大、缩小
   {
     "key": "enter",
@@ -182,6 +200,7 @@
     "when": "editorTextFocus && editorHasSelection && vim.mode == 'Visual'"
   },
 
+
   /** -------- 禁用设置 -------- */
   {
     "key": "ctrl+j",
@@ -190,11 +209,6 @@
   {
     "key": "ctrl+t",
     "command": "-workbench.action.openSettings"
-  },
-  {
-    "key": "alt+l alt+o",
-    "command": "-extension.liveServer.goOnline",
-    "when": "editorTextFocus"
   },
   {
     "key": "ctrl+shift+u",
@@ -207,12 +221,12 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+alt+l",
-    "command": "-turboConsoleLog.displayLogMessage"
-  },
-  {
     "key": "ctrl+d",
     "command": "-extension.vim_ctrl+d",
     "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
   },
 ]
