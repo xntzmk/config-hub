@@ -73,12 +73,20 @@
   // theme setup
   "editor.semanticTokenColorCustomizations": { },
   "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "Comment Italic",
+        "scope": [ "comment.line.double-slash", "comment.block.documentation" ],
+        "settings": { "fontStyle": "italic" }
+      },
+      {
+        "scope": [ "storage.type.function" ],
+        "settings": { "fontStyle": "italic" }
+      },
+    ],
+
     "[GitHub Plus]": {
       "textMateRules": [
-        {
-          "scope": [ "comment.line.double-slash" ],
-          "settings": { "fontStyle": "italic" }
-        },
         {
           "scope": [ "constant", "variable.other.constant" ],
           "settings": {
@@ -88,7 +96,7 @@
         },
         {
           "scope": [ "storage.type.function" ],
-          "settings": { "foreground": "#ff808b", "fontStyle": "italic" }
+          "settings": { "foreground": "#ff808b" }
         },
         {
           "scope": [ "keyword.control.trycatch", "variable.language.this" ],

@@ -200,6 +200,12 @@
     "when": "editorTextFocus && editorHasSelection && vim.mode == 'Visual'"
   },
 
+  // matchit 替换 vim 原生 %
+  {
+    "key": "shift+5",
+    "command": "extension.matchitJumpItems",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
 
   /** -------- 禁用设置 -------- */
   {
