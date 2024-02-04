@@ -2,10 +2,7 @@
   /** -------- Common -------- */
 
   // 拆分
-  {
-    "key": "ctrl+t",
-    "command": "workbench.action.splitEditor"
-  },
+  { "key": "ctrl+t", "command": "workbench.action.splitEditor" },
   {
     "key": "ctrl+t",
     "command": "workbench.action.terminal.split",
@@ -13,8 +10,8 @@
   },
 
   // 左右面板切换
-  { "key": "alt+h", "command": "workbench.action.navigateLeft" },
-  { "key": "alt+l", "command": "workbench.action.navigateRight" },
+  { "key": "alt+,", "command": "workbench.action.navigateLeft" },
+  { "key": "alt+.", "command": "workbench.action.navigateRight" },
 
   // 上下移动行
   {
@@ -31,7 +28,7 @@
   // 聚焦侧边栏
   {
     "key": "ctrl+e",
-    "command": "workbench.files.action.focusFilesExplorer",
+    "command": "workbench.files.action.focusFilesExplorer"
   },
 
   // 聚焦编辑器组
@@ -73,13 +70,6 @@
   {
     "command": "explorer.newFile",
     "key": "a",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-
-  // 新建文件夹
-  {
-    "command": "explorer.newFolder",
-    "key": "shift+a",
     "when": "filesExplorerFocus && !inputFocus"
   },
 
@@ -125,24 +115,11 @@
     "when": "listFocus && listSupportsFind && !inputFocus"
   },
 
-  // 折叠所有面板
-  {
-    "key": "shift+c",
-    "command": "workbench.files.action.collapseExplorerFolders",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-
   /** -------- Workbench -------- */
 
   // tab 切换
-  { "key": "ctrl+,",
-    "command": "runCommands",
-    "args": { "commands": [ "workbench.action.previousEditor", "extension.vim_escape" ] }
-  },
-  { "key": "ctrl+.",
-    "command": "runCommands",
-    "args": { "commands": [ "workbench.action.nextEditor", "extension.vim_escape" ] }
-  },
+  { "key": "ctrl+,", "command": "workbench.action.previousEditor" },
+  { "key": "ctrl+.", "command": "workbench.action.nextEditor" },
 
   /** -------- Terminal -------- */
 
@@ -200,22 +177,10 @@
     "when": "editorTextFocus && editorHasSelection && vim.mode == 'Visual'"
   },
 
-  // matchit 替换 vim 原生 %
-  {
-    "key": "shift+5",
-    "command": "extension.matchitJumpItems",
-    "when": "editorTextFocus && vim.mode == 'Normal'"
-  },
-
   /** -------- 禁用设置 -------- */
-  {
-    "key": "ctrl+j",
-    "command": "-workbench.action.togglePanel"
-  },
-  {
-    "key": "ctrl+t",
-    "command": "-workbench.action.openSettings"
-  },
+  { "key": "ctrl+j", "command": "-workbench.action.togglePanel" },
+  { "key": "ctrl+t", "command": "-workbench.action.openSettings" },
+  { "key": "ctrl+n", "command": "-workbench.action.files.newUntitledFile" },
   {
     "key": "ctrl+shift+u",
     "command": "-workbench.action.output.toggleOutput",
@@ -230,9 +195,5 @@
     "key": "ctrl+d",
     "command": "-extension.vim_ctrl+d",
     "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "-workbench.action.files.newUntitledFile"
-  },
+  }
 ]
