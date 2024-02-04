@@ -12,7 +12,7 @@
   "workbench.tree.indent": 15,
   "workbench.list.smoothScrolling": true,
   "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.value": 10,
+  "workbench.editor.limit.value": 12,
   "workbench.editor.limit.perEditorGroup": true,
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.closeOnFileDelete": true,
@@ -23,7 +23,7 @@
   "workbench.productIconTheme": "icons-carbon",
   "workbench.colorTheme": "GitHub Plus",
   "workbench.preferredLightColorTheme": "GitHub Plus",
-  "workbench.preferredDarkColorTheme": "Fleet Dark",
+  "workbench.preferredDarkColorTheme": "Maple Dark",
   "workbench.colorCustomizations": {
     // "tree.inactiveIndentGuidesStroke": "#6e719b",
     "[GitHub Plus]": {
@@ -47,9 +47,9 @@
   "editor.detectIndentation": false,
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
+    "source.fixAll": "never",
     "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never", // 防止import的分号冲突
+    "source.organizeImports": "never" // 防止import的分号冲突
   },
   "editor.occurrencesHighlight": "multiFile",
   "editor.find.addExtraSpaceOnTop": false,
@@ -219,9 +219,6 @@
     // 当前行复制粘贴
     { "before": [ "c", "p" ], "after": [ "y", "y", "p" ] },
 
-    // 快速粘贴
-    { "before": [ "g", "p" ], "after": [ "v", "i", "w", "p", "g", "v", "y" ] },
-
     // 取消高亮
     { "before": [ "g", "n" ], "commands": [ ":noh" ] },
 
@@ -238,6 +235,8 @@
     { "before": [ "'", "'" ], "after": [ "v", "i", "w", "S", "'", "e", "l" ] },
     { "before": [ "'", "\"" ], "after": [ "v", "i", "w", "S", "\"", "e", "l" ] },
     { "before": [ "'", "c" ], "after": [ "v", "i", "w", "S", "`" ] },
+    { "before": [ "'", "b" ], "after": [ "v", "i", "w", "S", "(" ] },
+    { "before": [ "'", "B" ], "after": [ "v", "i", "w", "S", "{" ] },
 
     // 大小写
     { "before": [ "g", "u" ], "after": [ "v", "i", "w", "g", "u" ] },
@@ -253,6 +252,9 @@
 
     // 切换布尔值
     { "before": [ "<leader>", "i" ], "commands": [ "extension.toggleBool" ] },
+
+    // 快速粘贴
+    { "before": [ "<leader>", "p" ], "after": [ "v", "i", "w", "p", "g", "v", "y" ] },
   ],
 
   "vim.visualModeKeyBindingsNonRecursive": [
