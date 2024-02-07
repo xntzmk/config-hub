@@ -108,13 +108,6 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
 
-  // 搜索
-  {
-    "key": "/",
-    "command": "list.find",
-    "when": "listFocus && listSupportsFind && !inputFocus"
-  },
-
   /** -------- Workbench -------- */
 
   // tab 切换
@@ -190,10 +183,5 @@
     "key": "ctrl+w",
     "command": "-expand_region",
     "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+d",
-    "command": "-extension.vim_ctrl+d",
-    "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
   }
 ]

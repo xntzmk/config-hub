@@ -1,13 +1,13 @@
 {
   /** Base */
+  "**": {
+    "prefix": "**",
+    "body": ["/** $1 */"],
+  },
+
   "console.log": {
     "prefix": "clg",
     "body": ["console.log($1)"],
-  },
-
-  "const": {
-    "prefix": "cn",
-    "body": ["const ${1:a} = $2"],
   },
 
   "default":{
@@ -15,25 +15,15 @@
     "body": ["default"],
   },
 
-  "for loop": {
-    "prefix": "for",
-    "body": [
-      "for (let ${1:i} = 0; ${1:i} < ${2:arr}.length; ${1:i}++) {",
-      "\tconst ${3:c} = ${2:arr}[${1:i}];",
-      "\t$0",
-      "}"
-    ]
-  },
-
   "forEach": {
     "prefix": "each",
     "body": [
       "forEach((${1:item}) => $2)",
     ],
-  }
+  },
 
   "deconstruct object": {
-    "prefix": "do",
+    "prefix": "dj",
     "body": ["const {${2:key}} = ${1:obj}"],
   },
 
@@ -46,9 +36,16 @@
     "prefix": "np",
     "body": ["return new Promise((resolve, reject) => {", "$1", "})"],
   },
-  "then & catch & finally": {
-    "prefix": "tc",
-    "body": [".then((res) => {", "  $1", "}).catch((err) => {", "  $2", "}).finally(() => {", "  $3", "})"],
+
+  "try finally": {
+    "prefix": "tf",
+    "body": [
+      "try {",
+      "\t$1",
+      "} finally {",
+      "\t$2",
+      "}"
+    ],
   },
 
   /** Func, Export */
@@ -151,4 +148,23 @@
       "computed(() => $1)"
     ]
   },
+  
+  "vue-props": {
+    "prefix": "props",
+    "body": [
+      "const props = defineProps({",
+      "\t$1",
+      "})"
+    ],
+  },
+
+  "vue-emit": {
+    "prefix": "emit",
+    "body": ["const emit = defineEmits(['$1'])"],
+  },
+
+  "vue-defineOptions": {
+    "prefix": "dname",
+    "body": ["defineOptions({ name: '${1:$TM_FILENAME_BASE}' })"]
+  }
 }

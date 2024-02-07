@@ -10,16 +10,16 @@
 
   /** -------- Workbench -------- */
   "workbench.tree.indent": 15,
+  "workbench.startupEditor": "welcomePage",
   "workbench.list.smoothScrolling": true,
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.value": 12,
   "workbench.editor.limit.perEditorGroup": true,
-  "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.tabActionCloseVisibility": false,
 
   // theme setup
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "catppuccin-mocha",
   "workbench.productIconTheme": "icons-carbon",
   "workbench.colorTheme": "GitHub Plus",
   "workbench.preferredLightColorTheme": "GitHub Plus",
@@ -49,13 +49,13 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": "never",
     "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never" // 防止import的分号冲突
+    "source.organizeImports": "never"
   },
   "editor.occurrencesHighlight": "multiFile",
   "editor.find.addExtraSpaceOnTop": false,
   "editor.bracketPairColorization.enabled": true,
-  "editor.codeActionWidget.includeNearbyQuickFixes": true, // 行内快捷修复
-  "editor.guides.bracketPairs": "active", // 括号连线 
+  "editor.codeActionWidget.includeNearbyQuickFixes": true,
+  "editor.guides.bracketPairs": "active",
   "editor.hover.sticky": true,
   "editor.stickyScroll.enabled": true,
   "editor.smoothScrolling": true,
@@ -67,8 +67,8 @@
   "editor.suggestSelection": "recentlyUsed",
   "editor.suggest.insertMode": "replace",
   "editor.snippetSuggestions": "top",
-  "editor.acceptSuggestionOnCommitCharacter": false, // 左括号、分号不键入自动补全
-  "editor.suggest.snippetsPreventQuickSuggestions": false, // 可以在使用代码片段后启用快速建议
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
 
   // theme setup
   "editor.semanticTokenColorCustomizations": { },
