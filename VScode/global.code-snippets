@@ -49,45 +49,29 @@
   },
 
   /** Func, Export */
-  "function declaration": {
-    "prefix": "fn",
-    "body": ["function ${1:f}($2) {", "$3", "}"],
-  },
-  "async function declaration": {
-    "prefix": "afn",
-    "body": ["async function ${1:f}($2) {", "$3", "}"],
-  },
-
-  "arrow function": {
-    "prefix": "cfn",
-    "body": ["const ${1:f} = ($2) => {", "$3", "}"],
-  },
-  "async arrow function": {
-    "prefix": "cafn",
-    "body": ["const ${1:f} = async ($2) => {", "$3", "}"],
-  },
-
-  "anonymous function": {
+  "base function": {
     "prefix": "f",
     "body": ["($1) => {$2}"],
   },
 
-  "export function declaration": {
+  "function": {
+    "prefix": "fn",
+    "body": ["function ${1:f}($2) {", "$3", "}"],
+  },
+
+  "arrow function": {
+    "prefix": "cn",
+    "body": ["const ${1:f} = ($2) => {", "$3", "}"],
+  },
+
+  "export function": {
     "prefix": "efn",
     "body": ["export function ${1:f} () {", "$2", "}"],
   },
-  "export async function declaration": {
-    "prefix": "eafn",
-    "body": ["export async function ${1:f} () {", "$2", "}"],
-  },
 
   "export arrow function": {
-    "prefix": "ecfn",
-    "body": ["export const ${1:bar} = $2"],
-  },
-  "export async arrow function": {
-    "prefix": "ecafn",
-    "body": ["export async const ${1:bar} = $2"],
+    "prefix": "ecn",
+    "body": ["export const ${1:f} = ($2) => {", "$3", "}"],
   },
 
   "export from": {
