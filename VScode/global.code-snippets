@@ -11,25 +11,18 @@
   },
 
   "default":{
-    "prefix": "dft",
+    "prefix": "df",
     "body": ["default"],
   },
 
-  "forEach": {
-    "prefix": "each",
-    "body": [
-      "forEach((${1:item}) => $2)",
-    ],
-  },
-
   "deconstruct object": {
-    "prefix": "dj",
+    "prefix": "cj",
     "body": ["const {${2:key}} = ${1:obj}"],
   },
 
   "deconstruct array": {
-    "prefix": "da",
-    "body": ["const {${2:first}} = ${1:arr}"],
+    "prefix": "cy",
+    "body": ["const {${2:first}} = ${1:array}"],
   },
 
   "return new Promise": {
