@@ -164,9 +164,9 @@
   },
 
   /** -------- 禁用设置 -------- */
-  { "key": "tab", "command": "-acceptSelectedSuggestion" },
   { "key": "ctrl+j", "command": "-workbench.action.togglePanel" },
   { "key": "ctrl+t", "command": "-workbench.action.openSettings" },
   { "key": "ctrl+n", "command": "-workbench.action.files.newUntitledFile" },
-  { "key": "ctrl+w", "command": "-expand_region" }
+  { "key": "ctrl+w", "command": "-expand_region" },
+  { "key": "f2", "command": "-abracadabra.renameSymbol" }
 ]

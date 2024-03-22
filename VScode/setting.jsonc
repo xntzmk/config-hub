@@ -209,12 +209,8 @@
     { "before": [ "N" ], "after": [ "N", "z", "z" ] },
 
     // 缩进
-    { "before": [ "shift+tab" ], "commands": [ "editor.action.outdentLines" ] },
-    { "before": [ "tab" ], "commands": [ "editor.action.indentLines" ] },
-
-    // 标签切换顺序
-    { "before": [ "<" ], "commands": [ "workbench.action.moveEditorLeftInGroup" ] },
-    { "before": [ ">" ], "commands": [ "workbench.action.moveEditorRightInGroup" ] },
+    { "before": [ "<" ], "commands": [ "editor.action.outdentLines" ] },
+    { "before": [ ">" ], "commands": [ "editor.action.indentLines" ] },
 
     // 当前行复制粘贴
     { "before": [ "c", "p" ], "after": [ "y", "y", "p" ] },
@@ -234,9 +230,6 @@
     // 单词添加引号 
     { "before": [ "'", "'" ], "after": [ "v", "i", "w", "S", "'", "e", "l" ] },
     { "before": [ "'", "\"" ], "after": [ "v", "i", "w", "S", "\"", "e", "l" ] },
-    { "before": [ "'", "c" ], "after": [ "v", "i", "w", "S", "`" ] },
-    { "before": [ "'", "b" ], "after": [ "v", "i", "w", "S", "(" ] },
-    { "before": [ "'", "B" ], "after": [ "v", "i", "w", "S", "{" ] },
 
     // 大小写
     { "before": [ "g", "u" ], "after": [ "v", "i", "w", "g", "u" ] },
@@ -266,8 +259,9 @@
     { "before": [ "p" ], "after": [ "p", "g", "v", "y" ] }, // 防止 p 之后寄存器被覆盖
 
     // 缩进
-    { "before": [ "tab" ], "commands": [ "editor.action.indentLines" ] },
-    { "before": [ "shift+tab" ], "commands": [ "editor.action.outdentLines" ] },
+    { "before": [ "<" ], "commands": [ "editor.action.outdentLines" ] },
+    { "before": [ ">" ], "commands": [ "editor.action.indentLines" ] },
+
   ],
 
   /** -------- Eslint https://github.com/antfu/eslint-config -------- */
