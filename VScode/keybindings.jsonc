@@ -25,19 +25,6 @@
     "when": "editorTextFocus && !editorReadonly"
   },
 
-  // 聚焦侧边栏
-  {
-    "key": "ctrl+e",
-    "command": "workbench.files.action.focusFilesExplorer"
-  },
-
-  // 聚焦编辑器组
-  {
-    "key": "ctrl+e",
-    "command": "workbench.action.focusFirstEditorGroup",
-    "when": "filesExplorerFocus"
-  },
-
   // 快速修复
   {
     "key": "ctrl+u",
@@ -47,14 +34,14 @@
 
   // 查找当前文件问题
   {
-    "key": "ctrl+8",
+    "key": "[",
     "command": "editor.action.marker.next",
-    "when": "editorFocus"
+    "when": "editorFocus && vim.mode == 'Normal'",
   },
   {
-    "key": "ctrl+9",
+    "key": "]",
     "command": "editor.action.marker.prev",
-    "when": "editorFocus"
+    "when": "editorFocus && vim.mode == 'Normal'",
   },
 
   // 查找匹配项
