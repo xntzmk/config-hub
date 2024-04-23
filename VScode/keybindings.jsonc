@@ -51,6 +51,17 @@
     "when": "editorFocus"
   },
 
+  {
+    "key": "ctrl+o",
+    "command": "extension.vim_ctrl+o",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "extension.vim_ctrl+i",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+
   /** -------- 文件树 -------- */
 
   // 新建文件
