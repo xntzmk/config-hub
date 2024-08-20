@@ -1,4 +1,9 @@
-.monaco-workbench .part>.content {
+.monaco-workbench .part>.content{
   font-size: 15px;
-  font-family: ComicShannsMono Nerd Font Mono, LXGW WenKai Mono;
+  font-family: Maple Mono, ComicShannsMono Nerd Font Mono, 'Maple Hand';
+}
+
+.monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container  .monaco-icon-label-container {
+  font-size: 15px !important;
+  font-family: Maple Mono, ComicShannsMono Nerd Font Mono, 'Maple Hand';
 }

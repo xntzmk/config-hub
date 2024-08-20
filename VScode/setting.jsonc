@@ -5,51 +5,56 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
 
-  "window.zoomLevel": 1,
+  "window.title": "${rootNameShort}",
+  "window.commandCenter": false,
   "window.menuBarVisibility": "hidden",
+  // "window.zoomLevel": 0.7,
 
   /** -------- Workbench -------- */
   "workbench.tree.indent": 15,
-  "workbench.startupEditor": "welcomePage",
   "workbench.list.smoothScrolling": true,
   "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.value": 12,
+  "workbench.editor.limit.value": 7,
   "workbench.editor.limit.perEditorGroup": true,
+  "workbench.startupEditor": "welcomePageInEmptyWorkbench",
   "workbench.editor.closeOnFileDelete": true,
   "workbench.editor.tabActionCloseVisibility": false,
 
   // theme setup
-  "workbench.iconTheme": "catppuccin-mocha",
+  "sundial.sunset": "17:30",
   "workbench.productIconTheme": "icons-carbon",
+  "workbench.iconTheme": "catppuccin-mocha",
   "workbench.colorTheme": "GitHub Plus",
   "workbench.preferredLightColorTheme": "GitHub Plus",
-  "workbench.preferredDarkColorTheme": "Maple Dark",
+  "workbench.preferredDarkColorTheme": "GitHub Plus",
   "workbench.colorCustomizations": {
-    // "tree.inactiveIndentGuidesStroke": "#6e719b",
     "[GitHub Plus]": {
-      "sideBar.background": "#f9f9f9",
-      "editor.background": "#f9f9f9",
+      "sideBar.background": "#fdfdfe",
+      "editor.background": "#fdfdfe",
       "editorBracketHighlight.foreground1": "#86cdfc",
       "editorBracketHighlight.foreground2": "#ebba60",
       "editorBracketHighlight.foreground3": "#e469b4",
       "editorBracketHighlight.foreground4": "#92dfd2"
-    }
+    },
   },
+
 
   /** -------- Editor -------- */
   "editor.tabSize": 2,
-  "editor.fontSize": 16,
-  "editor.fontWeight": "normal",
+  "editor.fontSize": 14,
+  "editor.fontWeight": "500",
+  "editor.lineNumbers": "relative",
   "editor.fontFamily": "MonoLisa, Maple Hand, LXGW WenKai Mono",
-  "editor.fontLigatures": true,
-  "editor.linkedEditing": true,
+  "editor.fontLigatures": false,
+  "editor.linkedEditing": false, // 不知道啥东西
   "editor.minimap.enabled": false,
   "editor.detectIndentation": false,
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
+  // "editor.renderWhitespace": "none",
   "editor.codeActionsOnSave": {
-    "source.fixAll": "never",
+    "source.fixAll": "explicit",
     "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never"
+    "source.organizeImports": "never",
   },
   "editor.occurrencesHighlight": "multiFile",
   "editor.find.addExtraSpaceOnTop": false,
@@ -59,14 +64,15 @@
   "editor.hover.sticky": true,
   "editor.stickyScroll.enabled": true,
   "editor.smoothScrolling": true,
-  "editor.cursorBlinking": "smooth",
+  "editor.cursorBlinking": "blink",
   "editor.cursorSmoothCaretAnimation": "on",
 
   // suggest
   "editor.suggest.preview": true,
-  "editor.suggestSelection": "recentlyUsed",
-  "editor.suggest.insertMode": "replace",
-  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "first",
+  "editor.suggest.insertMode": "insert",
+  "editor.snippetSuggestions": "inline",
+  "editor.suggest.localityBonus": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
 
@@ -75,7 +81,7 @@
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
-        "name": "Comment Italic",
+        "name": "comment",
         "scope": [ "comment.line.double-slash", "comment.block.documentation" ],
         "settings": { "fontStyle": "italic" }
       },
@@ -88,13 +94,6 @@
     "[GitHub Plus]": {
       "textMateRules": [
         {
-          "scope": [ "constant", "variable.other.constant" ],
-          "settings": {
-            // "foreground": "#0eb5da",
-            // "foreground": "#ffb91d"
-          }
-        },
-        {
           "scope": [ "storage.type.function" ],
           "settings": { "foreground": "#ff808b" }
         },
@@ -102,11 +101,6 @@
           "scope": [ "keyword.control.trycatch", "variable.language.this" ],
           "settings": { "foreground": "#42a5f5" }
         },
-        // {
-        //   "name": "object property",
-        //   "scope": [ "variable.other.property" ],
-        //   "settings": {  "foreground": "#bf9eee"  }
-        // },
         {
           "scope": [
             "keyword.control.export",
@@ -167,21 +161,21 @@
   },
 
   /** -------- Terminal -------- */
+  "terminal.external.windowsExec": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontWeight": "400",
   "terminal.integrated.fontFamily": "ComicShannsMono Nerd Font Mono, LXGW WenKai Mono",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.tabs.enabled": true,
   "terminal.integrated.splitCwd": "initial", // 防止拆分终端失败
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.persistentSessionReviveProcess": "never",
 
   /** -------- Git -------- */
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
-  "git.openRepositoryInParentFolders": "always",
 
   /** -------- Vim -------- */
   "vim.foldfix": true,
@@ -189,10 +183,6 @@
   "vim.leader": "<Space>",
   "vim.useCtrlKeys": false,
   "vim.useSystemClipboard": true,
-
-  // flash.vim
-  "vim.flash.enable": true,
-  "vim.flash.marker.backgroundColor": "#7fdbb2",
 
   "vim.operatorPendingModeKeyBindings": [
     { "before": [ "H" ], "after": [ "^" ] },
@@ -202,8 +192,8 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": [ "H" ], "after": [ "^" ] },
     { "before": [ "L" ], "after": [ "g", "_" ] },
-    { "before": [ "J" ], "after": [ "5", "g", "j" ] },
-    { "before": [ "K" ], "after": [ "5", "g", "k" ] },
+    { "before": [ "J" ], "after": [ "5", "j" ] },
+    { "before": [ "K" ], "after": [ "5", "k" ] },
 
     { "before": [ "n" ], "after": [ "n", "z", "z" ] },
     { "before": [ "N" ], "after": [ "N", "z", "z" ] },
@@ -217,15 +207,6 @@
 
     // 取消高亮
     { "before": [ "g", "n" ], "commands": [ ":noh" ] },
-
-    // 关闭标签
-    { "before": [ "g", "t" ], "commands": [ "workbench.action.closeEditorsToTheRight" ] },
-    { "before": [ "g", "o" ], "commands": [ "workbench.action.closeOtherEditors" ] },
-    { "before": [ "g", "O" ], "commands": [ "workbench.action.closeEditorsInOtherGroups", "workbench.action.closeOtherEditors" ] },
-
-    // 全部展开/折叠
-    { "before": [ "z", "C" ], "commands": [ "editor.foldAll" ] },
-    { "before": [ "z", "O" ], "commands": [ "editor.unfoldAll" ] },
 
     // 单词添加引号 
     { "before": [ "'", "'" ], "after": [ "v", "i", "w", "S", "'", "e", "l" ] },
@@ -253,20 +234,15 @@
   "vim.visualModeKeyBindingsNonRecursive": [
     { "before": [ "H" ], "after": [ "^" ] },
     { "before": [ "L" ], "after": [ "g", "_" ] },
-    { "before": [ "J" ], "after": [ "5", "g", "j" ] },
-    { "before": [ "K" ], "after": [ "5", "g", "k" ] },
+    { "before": [ "J" ], "after": [ "5", "j" ] },
+    { "before": [ "K" ], "after": [ "5", "k" ] },
     { "before": [ "y" ], "after": [ "y", "g", "v", "<esc>" ] }, // 在可视化模式下 y 之后光标停到当前的位置
     { "before": [ "p" ], "after": [ "p", "g", "v", "y" ] }, // 防止 p 之后寄存器被覆盖
-
-    // 缩进
-    { "before": [ "<" ], "commands": [ "editor.action.outdentLines" ] },
-    { "before": [ ">" ], "commands": [ "editor.action.indentLines" ] },
-
   ],
 
   /** -------- Eslint https://github.com/antfu/eslint-config -------- */
   "eslint.quiet": true,
-  "eslint.experimental.useFlatConfig": false,
+  "eslint.useFlatConfig": false,
   "eslint.codeAction.showDocumentation": { "enable": true },
   "eslint.validate": [
     "javascript",
@@ -288,44 +264,30 @@
     "editor.quickSuggestions": { "comments": "on", "strings": "on", "other": "on" },
     "diffEditor.ignoreTrimWhitespace": false,
   },
+  "editor.defaultFormatter": "yzhang.markdown-all-in-one",
   "markdown-preview-enhanced.codeBlockTheme": "vue.css",
 
   /** -------- Extensions -------- */
   "errorLens.enabledDiagnosticLevels": [ "warning", "error" ],
-  "errorLens.excludeBySource": [ "cSpell", "Grammarly", "eslint" ],
+  "errorLens.excludeBySource": [ "cSpell", "eslint" ],
 
-  // animations, custom_css
-  "animations.Scrolling": "Fade",
-  "animations.CursorAnimation": true,
-  "animations.Active": "None",
-  "animations.Tabs": "Slide",
-  "animations.Command-Palette": "None",
-  "animations.Focus-Dimming-Mode": "None",
-  "animations.Custom-CSS": true,
-  "animations.Smooth-Mode": false,
-  "animations.CursorAnimationOptions": { "Color": "#cfe5e1", "TrailLength": 7 },
-  "animations.Durations": { "Command-Palette": 200, "Scrolling": 200, },
+  // custom_css
   "vscode_custom_css.imports": [
     "file:///D:/Microsoft VS Code Custom/index.css",
-    "file:///c:/Users/pc/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.1/dist/updateHandler.js"
   ],
 
   "cSpell.language": "en,en-US",
   "cSpell.spellCheckOnlyWorkspaceFiles": true,
-  "cSpell.userWords": [ "Grammarly", "xntzmk" ],
+  "cSpell.userWords": [ "xntzmk" ],
 
+  "vue.autoInsert.bracketSpacing": true,
   "vue.autoInsert.dotValue": true,
 
-  "better-comments.tags": [
-    { "tag": "*", "color": "#98C379" },
-    { "tag": "?", "color": "#3498DB" },
-    { "tag": "#", "color": "#FF8C00" },
-    { "tag": "!", "color": "#FF2D00" },
-    { "tag": "-", "color": "#474747", "strikethrough": true, },
-  ],
+  "fittencode.languagePreference.displayPreference": "zh-cn",
+  "fittencode.languagePreference.commentPreference": "zh-cn",
 
   // File Nesting
-  "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
-  "explorer.fileNesting.patterns": { }
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": { },
 }

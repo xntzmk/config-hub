@@ -25,6 +25,23 @@
     "when": "editorTextFocus && !editorReadonly"
   },
 
+  // 关闭标签
+  { "key": "alt+l", "command": "workbench.action.closeEditorsToTheRight" },
+  { "key": "alt+o", "command": "workbench.action.closeOtherEditors" },
+
+  // 聚焦侧边栏
+  {
+    "key": "ctrl+e",
+    "command": "workbench.files.action.focusFilesExplorer"
+  },
+
+  // 聚焦编辑器组
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "filesExplorerFocus"
+  },
+
   // 快速修复
   {
     "key": "ctrl+u",
@@ -34,14 +51,12 @@
 
   // 查找当前文件问题
   {
-    "key": "[",
-    "command": "editor.action.marker.next",
-    "when": "editorFocus && vim.mode == 'Normal'",
+    "key": "ctrl+8",
+    "command": "editor.action.marker.prev",
   },
   {
-    "key": "]",
-    "command": "editor.action.marker.prev",
-    "when": "editorFocus && vim.mode == 'Normal'",
+    "key": "ctrl+9",
+    "command": "editor.action.marker.next",
   },
 
   // 查找匹配项
@@ -51,15 +66,11 @@
     "when": "editorFocus"
   },
 
+  // 跳转到资源管理器
   {
-    "key": "ctrl+o",
-    "command": "extension.vim_ctrl+o",
-    "when": "editorTextFocus && vim.active && !inDebugRepl"
-  },
-  {
-    "key": "ctrl+i",
-    "command": "extension.vim_ctrl+i",
-    "when": "editorTextFocus && vim.active && !inDebugRepl"
+    "key": "ctrl+e",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
   },
 
   /** -------- 文件树 -------- */
@@ -142,14 +153,14 @@
 
   /** -------- Extensions -------- */
 
-  // markdown 打开侧边预览
+  // markdown 侧边预览
   {
     "key": "ctrl+\\",
     "command": "markdown-preview-enhanced.openPreviewToTheSide",
     "when": "editorFocus && editorLangId == 'markdown'"
   },
 
-  // 增量范围选中扩大、缩小
+  // Expand Region
   {
     "key": "enter",
     "command": "expand_region",
@@ -161,10 +172,39 @@
     "when": "editorTextFocus && editorHasSelection && vim.mode == 'Visual'"
   },
 
+  {
+    "key": "right",
+    "command": "editor.action.inlineSuggest.commit",
+    "when": "inlineSuggestionVisible && !editorReadonly"
+  },
+
   /** -------- 禁用设置 -------- */
   { "key": "ctrl+j", "command": "-workbench.action.togglePanel" },
   { "key": "ctrl+t", "command": "-workbench.action.openSettings" },
   { "key": "ctrl+n", "command": "-workbench.action.files.newUntitledFile" },
   { "key": "ctrl+w", "command": "-expand_region" },
-  { "key": "f2", "command": "-abracadabra.renameSymbol" }
+  {
+    "key": "ctrl+o",
+    "command": "extension.vim_ctrl+o",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-extension.vim_ctrl+o",
+    "when": "editorTextFocus && vim.active && vim.use<C-o> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "extension.vim_ctrl+i",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "-extension.vim_ctrl+i",
+    "when": "editorTextFocus && vim.active && vim.use<C-i> && !inDebugRepl"
+  },
+  {
+    "key": "f2",
+    "command": "-abracadabra.renameSymbol",
+  },
 ]
