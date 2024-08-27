@@ -198,15 +198,8 @@
     { "before": [ "n" ], "after": [ "n", "z", "z" ] },
     { "before": [ "N" ], "after": [ "N", "z", "z" ] },
 
-    // 缩进
-    { "before": [ "<" ], "commands": [ "editor.action.outdentLines" ] },
-    { "before": [ ">" ], "commands": [ "editor.action.indentLines" ] },
-
     // 当前行复制粘贴
     { "before": [ "c", "p" ], "after": [ "y", "y", "p" ] },
-
-    // 取消高亮
-    { "before": [ "g", "n" ], "commands": [ ":noh" ] },
 
     // 单词添加引号 
     { "before": [ "'", "'" ], "after": [ "v", "i", "w", "S", "'", "e", "l" ] },
@@ -242,7 +235,7 @@
 
   /** -------- Eslint https://github.com/antfu/eslint-config -------- */
   "eslint.quiet": true,
-  "eslint.useFlatConfig": false,
+  "eslint.useFlatConfig": true,
   "eslint.codeAction.showDocumentation": { "enable": true },
   "eslint.validate": [ "javascript", "typescript", "javascriptreact", "typescriptreact", "vue", "html", "markdown", "json", "jsonc" ],
 
@@ -261,9 +254,7 @@
   "errorLens.excludeBySource": [ "cSpell", "eslint" ],
 
   // custom_css
-  "vscode_custom_css.imports": [
-    "file:///D:/Microsoft VS Code Custom/index.css",
-  ],
+  "vscode_custom_css.imports": [ "file:///D:/Microsoft VS Code Custom/index.css" ],
 
   "cSpell.language": "en,en-US",
   "cSpell.spellCheckOnlyWorkspaceFiles": true,
