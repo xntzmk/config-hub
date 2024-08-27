@@ -183,28 +183,15 @@
   { "key": "ctrl+t", "command": "-workbench.action.openSettings" },
   { "key": "ctrl+n", "command": "-workbench.action.files.newUntitledFile" },
   { "key": "ctrl+w", "command": "-expand_region" },
+  { "key": "f2", "command": "-abracadabra.renameSymbol" },
   {
-    "key": "ctrl+o",
+    "key": "end",
     "command": "extension.vim_ctrl+o",
     "when": "editorTextFocus && vim.active && !inDebugRepl"
   },
   {
-    "key": "ctrl+o",
-    "command": "-extension.vim_ctrl+o",
-    "when": "editorTextFocus && vim.active && vim.use<C-o> && !inDebugRepl"
-  },
-  {
-    "key": "ctrl+i",
+    "key": "home",
     "command": "extension.vim_ctrl+i",
     "when": "editorTextFocus && vim.active && !inDebugRepl"
-  },
-  {
-    "key": "ctrl+i",
-    "command": "-extension.vim_ctrl+i",
-    "when": "editorTextFocus && vim.active && vim.use<C-i> && !inDebugRepl"
-  },
-  {
-    "key": "f2",
-    "command": "-abracadabra.renameSymbol",
   },
 ]
