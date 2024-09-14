@@ -29,19 +29,6 @@
   { "key": "alt+l", "command": "workbench.action.closeEditorsToTheRight" },
   { "key": "alt+o", "command": "workbench.action.closeOtherEditors" },
 
-  // 聚焦侧边栏
-  {
-    "key": "ctrl+e",
-    "command": "workbench.files.action.focusFilesExplorer"
-  },
-
-  // 聚焦编辑器组
-  {
-    "key": "ctrl+e",
-    "command": "workbench.action.focusFirstEditorGroup",
-    "when": "filesExplorerFocus"
-  },
-
   // 快速修复
   {
     "key": "ctrl+u",
@@ -50,27 +37,14 @@
   },
 
   // 查找当前文件问题
-  {
-    "key": "ctrl+8",
-    "command": "editor.action.marker.prev",
-  },
-  {
-    "key": "ctrl+9",
-    "command": "editor.action.marker.next",
-  },
+  { "key": "ctrl+8", "command": "editor.action.marker.prev" },
+  { "key": "ctrl+9", "command": "editor.action.marker.next" },
 
   // 查找匹配项
   {
     "key": "ctrl+n",
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
-  },
-
-  // 跳转到资源管理器
-  {
-    "key": "ctrl+e",
-    "command": "workbench.view.explorer",
-    "when": "viewContainer.workbench.view.explorer.enabled"
   },
 
   /** -------- 文件树 -------- */
@@ -149,6 +123,19 @@
     "key": "ctrl+;",
     "command": "workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
+
+  },
+
+  /** -------- Vim -------- */
+  {
+    "key": "end",
+    "command": "extension.vim_ctrl+o",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "home",
+    "command": "extension.vim_ctrl+i",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
   },
 
   /** -------- Extensions -------- */
@@ -183,15 +170,5 @@
   { "key": "ctrl+t", "command": "-workbench.action.openSettings" },
   { "key": "ctrl+n", "command": "-workbench.action.files.newUntitledFile" },
   { "key": "ctrl+w", "command": "-expand_region" },
-  { "key": "f2", "command": "-abracadabra.renameSymbol" },
-  {
-    "key": "end",
-    "command": "extension.vim_ctrl+o",
-    "when": "editorTextFocus && vim.active && !inDebugRepl"
-  },
-  {
-    "key": "home",
-    "command": "extension.vim_ctrl+i",
-    "when": "editorTextFocus && vim.active && !inDebugRepl"
-  },
+  { "key": "f2", "command": "-abracadabra.renameSymbol" }
 ]
