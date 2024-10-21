@@ -137,9 +137,17 @@
     "command": "extension.vim_ctrl+i",
     "when": "editorTextFocus && vim.active && !inDebugRepl"
   },
+  {
+    "key": "ctrl+d",
+    "command": "vim.remap",
+    "when": "editorTextFocus &&  vim.active && vim.mode == 'Normal'",
+    "args": {
+      "after": [ "g", "d" ]
+    }
+  },
+
 
   /** -------- Extensions -------- */
-
   // markdown 侧边预览
   {
     "key": "ctrl+\\",
@@ -147,20 +155,9 @@
     "when": "editorFocus && editorLangId == 'markdown'"
   },
 
-  // Expand Region
-  {
-    "key": "enter",
-    "command": "expand_region",
-    "when": "editorTextFocus && (vim.mode == 'Normal' || vim.mode == 'Visual') && !suggestWidgetVisible"
-  },
-  {
-    "key": "backspace",
-    "command": "undo_expand_region",
-    "when": "editorTextFocus && editorHasSelection && vim.mode == 'Visual'"
-  },
 
   {
-    "key": "right",
+    "key": "tab",
     "command": "editor.action.inlineSuggest.commit",
     "when": "inlineSuggestionVisible && !editorReadonly"
   },
@@ -170,5 +167,20 @@
   { "key": "ctrl+t", "command": "-workbench.action.openSettings" },
   { "key": "ctrl+n", "command": "-workbench.action.files.newUntitledFile" },
   { "key": "ctrl+w", "command": "-expand_region" },
-  { "key": "f2", "command": "-abracadabra.renameSymbol" }
+  { "key": "ctrl+c", "command": "-extension.vim_ctrl+c" },
+  { "key": "f2", "command": "-abracadabra.renameSymbol" },
+  {
+    "key": "ctrl+alt+e",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "ctrl+alt+f",
+    "command": "workbench.view.search",
+    "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+  },
+  {
+    "key": "ctrl+alt+f",
+    "command": "workbench.action.findInFiles"
+  },
 ]
