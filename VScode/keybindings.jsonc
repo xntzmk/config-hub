@@ -37,8 +37,8 @@
   },
 
   // 查找当前文件问题
-  { "key": "ctrl+8", "command": "editor.action.marker.prev" },
-  { "key": "ctrl+9", "command": "editor.action.marker.next" },
+  { "key": "f8", "command": "editor.action.marker.prev" },
+  { "key": "f9", "command": "editor.action.marker.next" },
 
   // 查找匹配项
   {
@@ -128,12 +128,12 @@
 
   /** -------- Vim -------- */
   {
-    "key": "end",
+    "key": "ctrl+o",
     "command": "extension.vim_ctrl+o",
     "when": "editorTextFocus && vim.active && !inDebugRepl"
   },
   {
-    "key": "home",
+    "key": "ctrl+i",
     "command": "extension.vim_ctrl+i",
     "when": "editorTextFocus && vim.active && !inDebugRepl"
   },
@@ -155,6 +155,17 @@
     "when": "editorFocus && editorLangId == 'markdown'"
   },
 
+  // Expand Region
+  // {
+  //   "key": "enter",
+  //   "command": "expand_region",
+  //   "when": "editorTextFocus && (vim.mode == 'Normal' || vim.mode == 'Visual') && !suggestWidgetVisible"
+  // },
+  // {
+  //   "key": "backspace",
+  //   "command": "undo_expand_region",
+  //   "when": "editorTextFocus && editorHasSelection && vim.mode == 'Visual'"
+  // },
 
   {
     "key": "tab",
@@ -170,17 +181,18 @@
   { "key": "ctrl+c", "command": "-extension.vim_ctrl+c" },
   { "key": "f2", "command": "-abracadabra.renameSymbol" },
   {
-    "key": "ctrl+alt+e",
+    "key": "ctrl+e",
     "command": "workbench.view.explorer",
     "when": "viewContainer.workbench.view.explorer.enabled"
   },
   {
-    "key": "ctrl+alt+f",
-    "command": "workbench.view.search",
-    "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+    "key": "ctrl+9",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
   },
   {
-    "key": "ctrl+alt+f",
-    "command": "workbench.action.findInFiles"
+    "key": "ctrl+8",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult || inSearchEditor"
   },
 ]
