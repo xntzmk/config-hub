@@ -7,18 +7,6 @@
     "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
   },
 
-  // 上下移动行
-  {
-    "key": "ctrl+alt+k",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+alt+j",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-
   // 关闭标签
   { "key": "ctrl+shift+o", "command": "workbench.action.closeOtherEditors" },
   { "key": "ctrl+shift+l", "command": "workbench.action.closeEditorsToTheRight" },
@@ -31,8 +19,8 @@
   },
 
   // 查找当前文件问题
-  { "key": "ctrl+8", "command": "editor.action.marker.prev" },
-  { "key": "ctrl+9", "command": "editor.action.marker.next" },
+  { "key": "alt+8", "command": "editor.action.marker.prev" },
+  { "key": "alt+9", "command": "editor.action.marker.next" },
 
   // 查找匹配项
   {
@@ -43,12 +31,12 @@
 
   // 查找搜索结果
   {
-    "key": "ctrl+[",
+    "key": "ctrl+8",
     "command": "search.action.focusPreviousSearchResult",
     "when": "hasSearchResult || inSearchEditor"
   },
   {
-    "key": "ctrl+]",
+    "key": "ctrl+9",
     "command": "search.action.focusNextSearchResult",
     "when": "hasSearchResult || inSearchEditor"
   },
@@ -138,8 +126,13 @@
   /** -------- 扩展 -------- */
   {
     "key": "ctrl+\\",
-    "command": "markdown-preview-enhanced.openPreviewToTheSide",
-    "when": "editorFocus && editorLangId == 'markdown'"
+    "command": "markdown.showPreviewToSide",
+    "when": "editorLangId == 'markdown' && !activeEditorIsPreview"
+  },
+  {
+    "key": "ctrl+\\",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorLangId == 'markdown' && activeEditorIsPreview"
   },
 
   {
